@@ -13,7 +13,7 @@ describe RestyTest do
     end
   end
 
-  it "should start and stop nginx" do
+  it "should start, reload and stop nginx" do
     lambda { subject.start! }.should change {
       subject.running
     }.from(nil).to(true)
@@ -21,6 +21,10 @@ describe RestyTest do
     res = Excon.get("http://127.0.0.1:1984/")
     res.status.should == 200
     res.body.should == "Success!\n"
+
+    lambda { subject.reload! }.should_not change {
+      subject.running
+    }.from(true)
 
     lambda { subject.stop! }.should change {
       subject.running

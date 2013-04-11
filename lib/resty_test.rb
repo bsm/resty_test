@@ -43,6 +43,11 @@ module RestyTest
       @running = nil
     end
 
+    def reload!
+      return unless File.file?(paths.nginx_bin) && running
+      system "#{paths.nginx_bin} -s reload"
+    end
+
   end
 
   root = caller.detect {|path| path =~ /^(.+?\/(?:test|spec|features))\// }

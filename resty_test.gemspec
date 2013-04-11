@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = File.basename(__FILE__, '.gemspec')
   s.summary     = "RestyTest"
   s.description = "Test OpenResty with your favourite test framework!"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
 
   s.authors     = ["Dimitrij Denissenko"]
   s.email       = "dimitrij@blacksquaremedia.com"

@@ -7,11 +7,12 @@ Gem::Specification.new do |s|
   s.name        = File.basename(__FILE__, '.gemspec')
   s.summary     = "RestyTest"
   s.description = "Test OpenResty with your favourite test framework!"
-  s.version     = "0.2.1"
+  s.version     = "0.2.2"
 
   s.authors     = ["Dimitrij Denissenko"]
   s.email       = "dimitrij@blacksquaremedia.com"
   s.homepage    = "https://github.com/bsm/resty_test"
+  s.license     = 'MIT'
 
   s.require_path = 'lib'
   s.files        = `git ls-files`.split("\n")

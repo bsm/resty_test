@@ -5,7 +5,7 @@ class RestyTest::Config
   attr_accessor :root
 
   def source
-    @source ||= "http://openresty.org/download/ngx_openresty-1.2.7.8.tar.gz"
+    @source ||= "http://openresty.org/download/ngx_openresty-1.2.8.6.tar.gz"
   end
 
   def logger
